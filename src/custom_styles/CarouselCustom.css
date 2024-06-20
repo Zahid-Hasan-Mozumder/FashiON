@@ -1,0 +1,24 @@
+/* For carousel caption to have a black layer 
+under the caption when hovering over it */
+
+.carousel-item {
+    position: relative;
+}
+  
+.custom-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 30px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(100%);
+    opacity: 0;
+}
+  
+.carousel-item:hover .custom-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
